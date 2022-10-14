@@ -1,4 +1,3 @@
-# Akan-Name
 
 # Project name.
 Akan-Name
