@@ -35,5 +35,5 @@ function main(){
         akanName= MALE_NAMES[day]
     }
 
-    console.log(akanName);
+    alert("Your Akan Name is " + akanName);
 }
