@@ -25,12 +25,12 @@ function main(){
 
     var day = getUserInputAndCalculateDay();
     var gender = getGender ();
-    var AkanName = null;
+    var akanName = null;
 
     if (gender.toLowerCase().startsWith("f")){
 
         akanName = FEMALE_NAMES[day];
-        
+
     } else {
 
         akanName = MALE_NAMES[day]
