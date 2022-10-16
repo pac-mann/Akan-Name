@@ -37,4 +37,7 @@ function main(){
     }
 
     alert("Your Akan Name is " + akanName);
+
 }
+
+main();
