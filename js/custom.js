@@ -17,7 +17,7 @@ function getUserInputAndCalculateDay() {
 
 function getGender () {
 
-    var gender = prompt ("Enter your gender: ");
+    var gender = prompt("Enter your gender:");
     return gender; 
 }
 
@@ -40,4 +40,3 @@ function main(){
 
 }
 
-main();
