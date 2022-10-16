@@ -9,7 +9,7 @@ function getUserInputAndCalculateDay() {
     var century = parseInt(year.substring(0, 2));
     year = parseInt(year);
     var month = parseInt(prompt("Enter Month: "));
-    var month = parseInt(prompt("Enter Day: "));
+    var day = parseInt(prompt("Enter Day: "));
 
     var dayOfTheWeek = math.round(( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7)
     return dayOfTheWeek
@@ -30,9 +30,10 @@ function main(){
     if (gender.toLowerCase().startsWith("f")){
 
         akanName = FEMALE_NAMES[day];
+        
     } else {
 
-        akanName= MALE_NAMES[day]
+        akanName = MALE_NAMES[day]
     }
 
     alert("Your Akan Name is " + akanName);
