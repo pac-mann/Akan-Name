@@ -36,5 +36,3 @@ function getAkanName(day, gender) {
 	if (gender === "female") alert("Your Name is: " + femaleNames[day])
 	if (gender === "male") alert("Your Name is: " + maleNames[day])
 }
-
-
