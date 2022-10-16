@@ -21,6 +21,12 @@ function getDayBorn() {
 	var date = document.getElementById("date").value
 	var gender = document.getElementById("gender-select").value
 
+
+	if(isNaN(year)){
+		alert("Please enter a valid year");
+		return;
+	}
+
 	CC = Number(year.slice(0, 2))
 	YY = Number(year.slice(2, year.length))
 	MM = Number(month)
