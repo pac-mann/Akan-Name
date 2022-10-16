@@ -16,12 +16,13 @@ function getUserInputAndCalculateDay() {
 }
 
 function getGender(){
-
     var gender = prompt("Enter your gender: ");
     return gender; 
 }
 
 function main(){
+
+console.log(getUserInputAndCalculateDay());
 
     var day = getUserInputAndCalculateDay();
     var gender = getGender();
