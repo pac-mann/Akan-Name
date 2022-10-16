@@ -17,14 +17,14 @@ function getUserInputAndCalculateDay() {
 
 function getGender () {
 
-    var gender = prompt("Enter your gender:");
+    var gender = prompt("Enter your gender: ");
     return gender; 
 }
 
 function main(){
 
     var day = getUserInputAndCalculateDay();
-    var gender = getGender ();
+    var gender = getGender();
     var akanName = null;
 
     if (gender.toLowerCase().startsWith("f")){
