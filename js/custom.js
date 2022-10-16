@@ -1,43 +1,40 @@
-const MALE_NAMES = ["Kwasi", "Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
-const FEMALE_NAMES = ["Akosua", "Adwoa","Abenaa","Akua","Yaa","Kofi","Kwame"];
-const DAY_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var weekDays = [
+	"Sunday",
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday",
+]
+var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
+var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
 
+var YY
+var CC
+var MM
+var DD
 
-function getUserInputAndCalculateDay() {
+function getDayBorn() {
+	var year = document.getElementById("year").value
+	var month = document.getElementById("month").value
+	var date = document.getElementById("date").value
+	var gender = document.getElementById("gender-select").value
 
-    var year = prompt("Enter Year: ");
-    var century = parseInt(year.substring(0, 2));
-    year = parseInt(year);
-    var month = parseInt(prompt("Enter Month: "));
-    var day = parseInt(prompt("Enter Day: "));
+	CC = Number(year.slice(0, 2))
+	YY = Number(year.slice(2, year.length))
+	MM = Number(month)
+	DD = Number(date)
 
-    var dayOfTheWeek = math.round(( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day ) % 7)
-    return dayOfTheWeek
+	var dayOfTheWeek = Math.round(
+		(CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7
+	)
+	getAkanName(dayOfTheWeek, gender)
 }
 
-function getGender(){
-    var gender = prompt("Enter your gender: ");
-    return gender; 
+function getAkanName(day, gender) {
+	if (gender === "female") alert("Your Name is: " + femaleNames[day])
+	if (gender === "male") alert("Your Name is: " + maleNames[day])
 }
 
-function main(){
-
-console.log(getUserInputAndCalculateDay());
-
-    var day = getUserInputAndCalculateDay();
-    var gender = getGender();
-    var akanName = null;
-
-    if (gender.toLowerCase().startsWith("f")){
-
-        akanName = FEMALE_NAMES[day];
-
-    } else {
-
-        akanName = MALE_NAMES[day]
-    }
-
-    alert("Your Akan Name is " + akanName);
-
-}
 
