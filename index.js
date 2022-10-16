@@ -27,6 +27,17 @@ function getDayBorn() {
 		return;
 	}
 
+	if(isNaN(month)){
+		alert("Please a valid Month");
+		return;
+	}
+
+	if(isNaN(date)){
+		alert("Please a valid date");
+		return;
+	}
+
+
 	CC = Number(year.slice(0, 2))
 	YY = Number(year.slice(2, year.length))
 	MM = Number(month)
