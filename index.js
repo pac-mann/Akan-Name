@@ -66,13 +66,13 @@ function getDayBorn() {
 		return;
 	}
 
-	//currentYear = new Date().getFullYear()
+	var currentYear = new Date().getFullYear()
 
 
-//if (year > currentYear ) {
-		//alert("You cannot enter future year ");
-		//return;
-	//}
+if (year > currentYear ) {
+		alert("You cannot enter future year ");
+		return;
+	}
 
 
 
