@@ -37,7 +37,7 @@ function getDayBorn() {
 		return;
 	}
 
-	//validating against 
+	//validating against zero
 
 	if(year < 1900) {
 		alert("Enter valid year ");
@@ -54,8 +54,20 @@ function getDayBorn() {
 		return;
 	}
 
+	//Validating against someone entering a value more than what is expected eg date(33)
 
-	
+	if(date > 31) {
+		alert("Enter valid Date ");
+		return;
+	}
+
+	if(month > 12) {
+		alert("Enter valid Date ");
+		return;
+	}
+
+
+
 	CC = Number(year.slice(0, 2))
 	YY = Number(year.slice(2, year.length))
 	MM = Number(month)
