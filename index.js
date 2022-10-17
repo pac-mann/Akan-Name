@@ -40,29 +40,37 @@ function getDayBorn() {
 	//validating against zero
 
 	if(year < 1900) {
-		alert("Enter valid year ");
+		alert("Enter year after 1900 ");
 		return;
 	}
 
 	if(month < 1) {
-		alert("Enter valid Month ");
+		alert("Month cannot be less than 1 ");
 		return;
 	}
 
 	if(date < 1) {
-		alert("Enter valid Date ");
+		alert("Date cannot be less than 1 ");
 		return;
 	}
 
 	//Validating against someone entering a value more than what is expected eg date(33)
 
 	if(date > 31) {
-		alert("Enter valid Date ");
+		alert("Maximum date is 31 ");
 		return;
 	}
 
 	if(month > 12) {
-		alert("Enter valid Date ");
+		alert("There are only 12 months ");
+		return;
+	}
+
+	currentYear = new Date().getFullYear()
+
+
+if (year > currentYear ) {
+		alert("You cannot enter future year ");
 		return;
 	}
 
